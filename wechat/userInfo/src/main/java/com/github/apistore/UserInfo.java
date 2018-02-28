@@ -9,14 +9,17 @@ import com.github.apistore.util.CommonUtil;
 import net.sf.json.JSONObject;
 
 /**  
-* @ClassName: UserInfo  
-* @author 青鸟  
+* @ClassName: 获取用户基本信息  
+* @author 极酷
 * @date 2018年2月25日 下午11:39:14  
-* @url www.yizq.org 
+* @url www.jcold.com 
 *  
 */
 public class UserInfo {
 	
+	/**
+	 * 获取用户信息
+	 */
 	public static JSONObject getUserInfo(String accessToken, String openId) {
 		// 拼接请求地址
 		String requestUrl = "https://api.weixin.qq.com/cgi-bin/user/info?access_token=ACCESS_TOKEN&openid=OPENID";
@@ -30,5 +33,6 @@ public class UserInfo {
 		String accessToken = "ACCESS_TOKEN";
 		String openId="OPENID";
 		System.out.println(getUserInfo(accessToken, openId));
+		
 	}
 }
